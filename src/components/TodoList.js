@@ -11,6 +11,12 @@ const ToDoList = () => {
     setTaskName("");
   }
 
+  function deleteTask(index) {
+    const updatedTaks = [...task];
+    updatedTaks.splice(index, 1);
+    setTask(updatedTaks);
+  }
+
   return (
     <div>
       <form>
@@ -29,9 +35,7 @@ const ToDoList = () => {
           return (
             <li key={index}>
               <p>{item}</p>{" "}
-              <button onClick={(e) => e.target.parentNode.remove()}>
-                Delete
-              </button>
+              <button onClick={() => deleteTask(index)}>Delete</button>
             </li>
           );
         })}
