@@ -1,0 +1,37 @@
+import React, { useState } from "react";
+
+const ToDoList = () => {
+  const [taskName, setTaskName] = useState("");
+
+  const [task, setTask] = useState([]);
+
+  function addToDo(e) {
+    e.preventDefault();
+    setTask([...task, taskName]);
+  }
+
+  return (
+    <div>
+      <form>
+        <input type="text" onChange={(e) => setTaskName(e.target.value)} />
+        <button onClick={addToDo}>Add Todo</button>
+      </form>
+
+      <ul>
+        {task.map((item, index) => {
+          console.log(item);
+          return (
+            <li key={index}>
+              <p>{item}</p>{" "}
+              <button onClick={(e) => e.target.parentNode.remove()}>
+                Delete
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
+export default ToDoList;
