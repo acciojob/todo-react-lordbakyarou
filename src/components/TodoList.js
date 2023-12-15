@@ -13,6 +13,7 @@ const ToDoList = () => {
   return (
     <div>
       <form>
+        <p>To-Do List</p>
         <input type="text" onChange={(e) => setTaskName(e.target.value)} />
         <button onClick={addToDo}>Add Todo</button>
       </form>
