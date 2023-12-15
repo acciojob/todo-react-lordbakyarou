@@ -31,10 +31,9 @@ const ToDoList = () => {
 
       <ul>
         {task.map((item, index) => {
-          console.log(item);
           return (
             <li key={index}>
-              <p>{item}</p>{" "}
+              <p>{item}</p>
               <button onClick={() => deleteTask(index)}>Delete</button>
             </li>
           );
