@@ -8,13 +8,18 @@ const ToDoList = () => {
   function addToDo(e) {
     e.preventDefault();
     setTask([...task, taskName]);
+    setTaskName("");
   }
 
   return (
     <div>
       <form>
         <p>To-Do List</p>
-        <input type="text" onChange={(e) => setTaskName(e.target.value)} />
+        <input
+          type="text"
+          onChange={(e) => setTaskName(e.target.value)}
+          value={taskName}
+        />
         <button onClick={addToDo}>Add Todo</button>
       </form>
 
