@@ -12,8 +12,10 @@ ul {
 
 li {
   display: flex;
-  gap: 50px;
+  /* gap: 50px; */
   align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
 
 li button {
