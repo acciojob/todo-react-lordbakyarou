@@ -29,9 +29,9 @@ const ToDoList = () => {
           return (
             <li key={index}>
               <p>{item}</p>{" "}
-              {/* <button onClick={(e) => e.target.parentNode.remove()}>
+              <button onClick={(e) => e.target.parentNode.remove()}>
                 Delete
-              </button> */}
+              </button>
             </li>
           );
         })}
